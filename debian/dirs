@@ -1,3 +1,4 @@
 usr/bin
 etc/docdiff
 usr/share/man/man1
+usr/lib/ruby/vendor_ruby

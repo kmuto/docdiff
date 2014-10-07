@@ -6,11 +6,9 @@ Build-Depends: debhelper (>= 9)
 Build-Depends-Indep: ruby, ruby-dev, docbook-to-man
 Standards-Version: 3.9.5
 Homepage: http://sourceforge.net/projects/docdiff
-XS-Ruby-Versions: all
 
 Package: docdiff
 Architecture: all
-XB-Ruby-Versions: ${ruby:Versions}
 Depends: ${misc:Depends}, ruby | ruby-interpreter
 Suggests: httpd
 Description: Compares two files word by word / char by char
