@@ -14,3 +14,16 @@ export DH_OPTIONS
 
 %:
 	dh $@
+
+clean:
+	dh clean
+	-rm -f docdiff.1
+
+override_dh_auto_build-indep:
+	/usr/bin/docbook-to-man debian/manpage.sgml > docdiff.1
+
+override_dh_auto_install:
+	$(MAKE) DESTDIR=$(CURDIR)/debian/docdiff PREFIX=/usr install
+	sed -e "s/\/usr\/bin\/env ruby/\/usr\/bin\/ruby/" -i $(CURDIR)/debian/docdiff/usr/bin/docdiff
+	rm $(CURDIR)/debian/docdiff/usr/share/doc/docdiff/ChangeLog
+	install -o root -g root -m 0644 docdiff.1 $(CURDIR)/debian/docdiff/usr/share/man/man1
