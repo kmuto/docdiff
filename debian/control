@@ -1,0 +1,20 @@
+Source: docdiff
+Section: text
+Priority: optional
+Maintainer: Kenshi Muto <kmuto@debian.org>
+Build-Depends: debhelper (>= 9)
+Build-Depends-Indep: ruby, ruby-dev, docbook-to-man
+Standards-Version: 3.9.5
+Homepage: http://sourceforge.net/projects/docdiff
+
+Package: docdiff
+Architecture: all
+Depends: ${misc:Depends}, ruby | ruby-interpreter
+Suggests: httpd
+Description: Compares two files word by word / char by char
+ DocDiff compares two files and shows the difference.  It can compare files
+ word by word, char by char, or line by line. 
+ .
+ It has several output formats such as HTML/XHTML, tty, Manued, or
+ user-defined markup.  It supports several encodings and end-of-line
+ characters, including ASCII, UTF-8, EUC-JP, Shift_JIS, CR, LF, and CRLF.

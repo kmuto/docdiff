@@ -1,0 +1,142 @@
+docdiff (0.5.0-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Kenshi Muto <kmuto@debian.org>  Tue, 07 Oct 2014 20:05:49 +0900
+
+docdiff (0.4.0-2) unstable; urgency=low
+
+  * Switch rubylibdir to /usr/lib/ruby/vendor_ruby to follow new Ruby policy.
+  * Applied Jari's 'Helping to update to packaging format 3.0' patch.
+    Thanks. (Closes: #670272)
+  * Remove deprecated dpatch and upgrade to packaging format "3.0 quilt".
+  * Update to Standards-Version to 3.9.3 and debhelper to 9.
+  * Fix clean-should-be-satisfied-by-build-depends cdbs debhelper (Lintian).
+  * Fix copyright-without-copyright-notice (Lintian).
+  * Fix no-homepage-field (Lintian).
+
+ -- Kenshi Muto <kmuto@debian.org>  Sat, 30 Jun 2012 20:07:46 +0900
+
+docdiff (0.4.0-1) unstable; urgency=low
+
+  * New upstream release
+  * Apply upstream svn update r193-r196.
+    - r196: Add preliminary support for RubyGems, thanks to takahashim
+      and sakuro.
+    - r195: Update comments and such.
+    - r194: Switch library install directory from rubylibdir (e.g.
+      /usr/lib/ruby/1.9.1) to datadir (e.g. /usr/share) for 1.9/1.8
+      compatibility.
+  * Modify dependency: Remove libiconv-ruby1.8 from Depends because
+    it is included in the ruby binary package. Add ruby1.9.1 for
+    alternatives of ruby which points ruby1.8 at this time.
+
+ -- Kenshi Muto <kmuto@debian.org>  Sat, 26 Feb 2011 17:36:37 +0900
+
+docdiff (0.3.4-1) unstable; urgency=low
+
+  * New upstream release
+  * Specify implicit ruby version (current 1.8) to docdiff script. 
+    (closes: #301910)
+  * Ready to accept ignore-whitespace and wordwrap patches contributed from
+    Andrew. Thanks. But because they cause unit-test failure, I disable
+    them at this time. I'll enable them when upstream accept.
+    (#452737)
+
+ -- Kenshi Muto <kmuto@debian.org>  Mon, 10 Dec 2007 05:24:26 +0000
+
+docdiff (0.3.3-1) unstable; urgency=low
+
+  * New upstream release
+  * Apply embeded anchor patch (closes: #346365)
+
+ -- Kenshi Muto <kmuto@debian.org>  Sat,  4 Feb 2006 03:23:55 +0000
+
+docdiff (0.3.2-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Kenshi Muto <kmuto@debian.org>  Tue,  8 Feb 2005 20:19:28 +0900
+
+docdiff (0.3.1-2) unstable; urgency=low
+
+  * New maintainer.
+  * Fix build-dep. This solves #291089 indeed.
+
+ -- Kenshi Muto <kmuto@debian.org>  Tue,  8 Feb 2005 20:03:38 +0900
+
+docdiff (0.3.1-1) unstable; urgency=low
+
+  * new upstream version.
+  * added debian/watch file.
+
+ -- akira yamada <akira@debian.org>  Sat,  9 Oct 2004 13:42:24 +0900
+
+docdiff (0.3.0-2) unstable; urgency=high
+
+  * debian/control: docdiff depends on ruby1.8 and libiconv-ruby1.8.
+    (closes: #267176)
+  * debian/manpage.sgml: removed desciption about "--format=terminal" and
+    "--format=stat".  (closes: #267159, #267160)
+
+ -- akira yamada <akira@debian.org>  Wed, 25 Aug 2004 13:47:53 +0900
+
+docdiff (0.3.0-1) unstable; urgency=low
+
+  * new upstream version.
+  * updated description.  Thanks to Hisashi MORITA.
+
+ -- akira yamada <akira@debian.org>  Thu,  3 Jun 2004 15:10:49 +0900
+
+docdiff (0.1.8+0.3.0rc3-1) unstable; urgency=low
+
+  * new upstream version. (0.3.0 RC3)
+
+ -- akira yamada <akira@debian.org>  Mon, 17 May 2004 01:17:03 +0900
+
+docdiff (0.1.8+0.3.0pre20040411-1) unstable; urgency=low
+
+  * new upstream version. (0.3.0 RC)
+  * removed chasen from Suggests.  docdiff-0.3.0 does not require ChaSen at
+    any time.
+  * updated debian/copyright.
+  
+ -- akira yamada <akira@debian.org>  Sat, 15 May 2004 03:09:08 +0900
+
+docdiff (0.1.8-1) unstable; urgency=low
+
+  * new upstream version.
+  * the version of docdiff reads ~/.chasenrc.docdiff or /etc/docdiff/chasenrc.
+    this package provides /etc/docdiff/chasenrc. (closes: #192261)
+
+ -- akira yamada <akira@debian.org>  Sun, 14 Dec 2003 14:45:09 +0900
+
+docdiff (0.1.5-4) unstable; urgency=low
+
+  * added docbook-to-man to Build-Depends-Indep, closes: #134908.
+    Thanks to Matt Hope <dopey@debian.org> and Otavio Real Salvador
+    <otavio@freedom.ind.br>.
+
+ -- akira yamada <akira@debian.org>  Mon, 25 Feb 2002 15:26:33 +0900
+
+docdiff (0.1.5-3) unstable; urgency=low
+
+  * Suggests: chasen (closes: #92585, #97142)
+  * docdiff.sgml: removed sentence "it  has documentation in the GNU
+    Info format; see below" because no info file available
+    (closes: #97143)
+
+ -- akira yamada <akira@debian.org>  Sat, 19 May 2001 13:00:49 +0900
+
+docdiff (0.1.5-2) unstable; urgency=low
+
+  * Depends: diff.
+  * rewrite .chasenrc.docdiff for ipadic.
+
+ -- akira yamada <akira@debian.org>  Thu, 15 Mar 2001 17:11:29 +0900
+
+docdiff (0.1.5-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- akira yamada <akira@debian.org>  Wed,  7 Feb 2001 15:48:59 +0900

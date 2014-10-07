@@ -1,0 +1,17 @@
+docdiff.conf.example
+sample/01.en.ascii.cr
+sample/01.en.ascii.crlf
+sample/01.en.ascii.lf
+sample/01.ja.eucjp.lf
+sample/01.ja.sjis.cr
+sample/01.ja.sjis.crlf
+sample/01.ja.utf8.crlf
+sample/02.en.ascii.cr
+sample/02.en.ascii.crlf
+sample/02.en.ascii.lf
+sample/02.ja.eucjp.lf
+sample/02.ja.sjis.cr
+sample/02.ja.sjis.crlf
+sample/02.ja.utf8.crlf
+sample/humpty_dumpty01.ascii.lf
+sample/humpty_dumpty02.ascii.lf
